@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Dashboard</h1>
+  <a href="/new-post">Add New Post</a>
+  {{#each posts}}
+    <div class="post">
+      <h2>{{ title }}</h2>
+      <p>{{ content }}</p>
+      <a href="/edit-post/{{ id }}">Edit</a>
+      <a href="/delete-post/{{ id }}">Delete</a>
+    </div>
+  {{/each}}
+</div>
