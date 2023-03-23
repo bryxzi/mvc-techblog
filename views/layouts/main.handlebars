@@ -2,17 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CMS Blog</title>
-  <!-- Add your CSS stylesheets here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CMS Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <!-- Add your navigation here -->
+    <header class="display-flex justify-space-between align-center p-2">
+      <nav>
+        <a href="/">Home</a>
+        {{#if logged_in}}
+        <a href="/dashboard">Dashboard</a> |
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
 
-  {{{ body }}}
+    <div class="flex-column justify-space-around">
+      {{{ body }}}
+    </div>
 
-  <!-- Add your client-side JavaScript files here -->
+    <!-- Add your client-side JavaScript files here -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
+
 </html>
