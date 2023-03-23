@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS your_database_name;
-CREATE DATABASE your_database_name;
+DROP DATABASE IF EXISTS mvc_tech_blog;
+CREATE DATABASE mvc_tech_blog;
