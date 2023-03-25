@@ -7,6 +7,7 @@ const htmlRoutes = require('./controllers/htmlRoutes');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 const app = express();
+const path = require('path');
 const PORT = process.env.PORT || 3001;
 
 // Set up sessions

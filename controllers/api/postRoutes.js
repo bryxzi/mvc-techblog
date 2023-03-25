@@ -6,7 +6,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
-      include: [{ model: User, attributes: ['name'] }]
+      include: [{ model: User, attributes: ['username'] }]
     });
     res.status(200).json(postData);
   } catch (err) {
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
-      include: [{ model: User, attributes: ['name'] }]
+      include: [{ model: User, attributes: ['username'] }]
     });
 
     if (!postData) {

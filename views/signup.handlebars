@@ -1,18 +1,62 @@
-<h2>Sign Up</h2>
-<form class="form" id="signupForm">
-  <div class="form-group">
-    <label for="username-signup">Username:</label>
-    <input class="form-input" type="text" id="username-signup" name="username" required/>
-  </div>
-  <div class="form-group">
-    <label for="email-signup">Email:</label>
-    <input class="form-input" type="email" id="email-signup" name="email" required/>
-  </div>
-  <div class="form-group">
-    <label for="password-signup">Password:</label>
-    <input class="form-input" type="password" id="password-signup" name="password" required/>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit" id="signupBtn">Sign Up</button>
-  </div>
-</form>
+<style>
+    .signup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .signup-box {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 400px;
+        max-width: 90%;
+    }
+
+    .form-group button {
+        margin-top: 10px;
+    }
+
+    .success-message {
+        margin-top: 15px;
+        color: green;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(0, 255, 0, 0.1);
+    }
+
+    .failure-message {
+        margin-top: 15px;
+        color: red;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+</style>
+
+<div class="signup-container">
+    <div class="signup-box">
+        <h2 id="signup-heading">Sign Up</h2>
+        <form class="form signup-form">
+            <div class="form-group">
+                <label for="username-signup">Username:</label>
+                <input class="form-input" type="text" id="username-signup" />
+            </div>
+            <div class="form-group">
+                <label for="password-signup">Password:</label>
+                <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Sign Up</button>
+            </div>
+            <div class="form-group">
+                <p>Already have an account? <a href="/login" class="login-link">Log in</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="./js/signup.js"></script>
+</div>
