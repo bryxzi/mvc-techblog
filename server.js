@@ -34,6 +34,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve CSS files with correct MIME type
+app.use('/css', express.static(path.join(__dirname, 'public/css'), { type: 'text/css' }));
+
 // Use routes
 app.use(routes);
 app.use(htmlRoutes);
