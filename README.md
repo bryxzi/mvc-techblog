@@ -9,8 +9,13 @@ This Blog is a Content Management System (CMS) that allows users to create, edit
 Heroku Link: https://techblog-mv.herokuapp.com
 
 ## Github Links
-Github: https://github.com/bryxzi
-Project Repository: https://github.com/bryxzi/mvc-techblog
+* Github: https://github.com/bryxzi
+* Project Repository: https://github.com/bryxzi/mvc-techblog
+
+## Demo
+
+![demo photo](./public/images/demo.png)
+
 
 ## Features
 
