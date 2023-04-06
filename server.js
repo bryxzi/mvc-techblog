@@ -41,6 +41,12 @@ app.use('/css', express.static(path.join(__dirname, 'public/css'), { type: 'text
 app.use(routes);
 app.use(htmlRoutes);
 
+// Error handler middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
 // Start the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
